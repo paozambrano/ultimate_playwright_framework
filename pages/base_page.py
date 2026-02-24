@@ -15,3 +15,7 @@ class BasePage:
 
     def wait_for_text(self, selector: str, text: str):
         expect(self.page.locator(selector)).to_have_text(text)
+
+    def is_visible(self, selector: str, text: str):
+        expect(self.page.locator(selector)).to_be_visible()
+        
